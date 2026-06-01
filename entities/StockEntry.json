@@ -1,0 +1,39 @@
+{
+  "name": "StockEntry",
+  "type": "object",
+  "properties": {
+    "item_id": {
+      "type": "string"
+    },
+    "item_name": {
+      "type": "string"
+    },
+    "qty_added": {
+      "type": "number"
+    },
+    "purchase_price": {
+      "type": "number"
+    },
+    "vendor_id": {
+      "type": "string"
+    },
+    "vendor_name": {
+      "type": "string"
+    },
+    "stock_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "new_stock_total": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "item_id",
+    "item_name",
+    "qty_added"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Offer",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Offer title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Offer description"
+    },
+    "discount_type": {
+      "type": "string",
+      "enum": [
+        "percentage",
+        "flat",
+        "bogo"
+      ],
+      "description": "Type of discount"
+    },
+    "discount_value": {
+      "type": "number",
+      "description": "Discount value"
+    },
+    "valid_from": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date"
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date",
+      "description": "End date"
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "Whether offer is active"
+    },
+    "combo_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Product names included in combo"
+    },
+    "min_qty": {
+      "type": "number",
+      "description": "Minimum quantity required"
+    },
+    "max_discount": {
+      "type": "number",
+      "description": "Maximum discount cap"
+    }
+  },
+  "required": [
+    "title",
+    "discount_type",
+    "discount_value"
+  ]
+}

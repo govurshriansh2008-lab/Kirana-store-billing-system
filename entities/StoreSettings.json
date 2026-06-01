@@ -1,0 +1,39 @@
+{
+  "name": "StoreSettings",
+  "type": "object",
+  "properties": {
+    "store_name": {
+      "type": "string"
+    },
+    "gst_number": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "upi_id": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "bill_prefix": {
+      "type": "string"
+    },
+    "bill_footer": {
+      "type": "string"
+    },
+    "default_gst": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "store_name"
+  ]
+}

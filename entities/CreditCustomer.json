@@ -1,0 +1,31 @@
+{
+  "name": "CreditCustomer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Customer name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "total_credit": {
+      "type": "number",
+      "description": "Total pending credit amount"
+    },
+    "last_purchase_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Last purchase date"
+    },
+    "is_overdue": {
+      "type": "boolean",
+      "description": "Whether credit is overdue"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}

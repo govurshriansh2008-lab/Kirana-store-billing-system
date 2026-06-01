@@ -1,0 +1,101 @@
+{
+  "name": "InventoryItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Item name (uppercase)"
+    },
+    "code": {
+      "type": "string",
+      "description": "Item code"
+    },
+    "barcode": {
+      "type": "string",
+      "description": "Barcode"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "KIRANA",
+        "SPICES",
+        "FMCG",
+        "GENERAL",
+        "DAIRY",
+        "BEVERAGES",
+        "SNACKS",
+        "PERSONAL CARE",
+        "HOUSEHOLD",
+        "PULSES",
+        "RICE & FLOUR",
+        "OIL & GHEE"
+      ],
+      "description": "Department/Category"
+    },
+    "sale_type": {
+      "type": "string",
+      "enum": [
+        "General Sale",
+        "Offer Sale"
+      ],
+      "default": "General Sale"
+    },
+    "mrp": {
+      "type": "number",
+      "description": "Base MRP in rupees"
+    },
+    "sale_price": {
+      "type": "number",
+      "description": "Default sale price"
+    },
+    "purchase_price": {
+      "type": "number",
+      "description": "Purchase price"
+    },
+    "gst_percentage": {
+      "type": "number",
+      "description": "GST percentage"
+    },
+    "stock_qty": {
+      "type": "number",
+      "description": "Stock quantity"
+    },
+    "min_stock": {
+      "type": "number",
+      "description": "Minimum stock alert level"
+    },
+    "price_tiers": {
+      "type": "array",
+      "description": "Multi-tier pricing matrix",
+      "items": {
+        "type": "object",
+        "properties": {
+          "qty": {
+            "type": "number"
+          },
+          "mrp": {
+            "type": "number"
+          },
+          "sale_rate": {
+            "type": "number"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "PKT",
+              "KG",
+              "PCE",
+              "LTR",
+              "G"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "sale_price",
+    "stock_qty"
+  ]
+}

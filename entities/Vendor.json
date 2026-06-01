@@ -1,0 +1,38 @@
+{
+  "name": "Vendor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Vendor name"
+    },
+    "business_type": {
+      "type": "string",
+      "description": "Business type"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "upi_id": {
+      "type": "string",
+      "description": "UPI ID"
+    },
+    "total_paid": {
+      "type": "number",
+      "description": "Total amount paid"
+    },
+    "paid_today": {
+      "type": "number",
+      "description": "Amount paid today"
+    },
+    "daily_limit": {
+      "type": "number",
+      "description": "Daily payment limit"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}
